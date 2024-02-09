@@ -1,6 +1,10 @@
 # Python Strings
 
 #________________________________________________________________________________________________________
+
+# Asssigning strings to Variables
+# Commonly used: everyhere and anywhere
+ 
 print("Start of the String Intro:")
 
 x = "Hello, World!" # good
@@ -37,6 +41,8 @@ I stopped to rest.
 #________________________________________________________________________________________________________
 
 # Concatenation
+# Commonly used: to combine strings together or join groups of elements
+
 
 z = "I want to hunt"
 c = "deer"
@@ -47,30 +53,33 @@ c = "deer"
 
 # print(z + " " + c) # good
 
+# print(z, c) # better
+
 
 #________________________________________________________________________________________________________
 
 # Strings are Arrays
+# Commonly used: extracting sub strings
 
+transaction_data = "2024-02-08,12345,John Doe,Product A,29.99"
 
-#refer to lines 26-29
+transaction_date = transaction_data[:10] 
 
-# print(g[0])
+transaction_client = transaction_data[17:25] # when slicing strings, the second index is also included compared to list arrays where it isn't
 
-# print(g[1])
+transaction_price = transaction_data[36:41]
 
-# print(g[2])
+# print("Transaction Date:", transaction_date)
 
-# print(g[2:6]) # when slicing strings, the second index is also included compared to list arrays
+# print("Transaction's User:", transaction_client ) 
 
-# print(g[0:23])
-
-# print(g[24:])
+# print("Transaction's Price:", "$" + transaction_price )
 
 
 #________________________________________________________________________________________________________
 
 # Modification
+# Commonly used: when user credentials (firstname/lastname and password) is given
 
 firstname = "DIEGO"
 lastname = "torres"
@@ -79,16 +88,62 @@ lastname = "torres"
 # print(firstname)
 # print(lastname)
 
-# print(firstname.lower)
-# print(lastname.upper)
+# print(firstname.lower) # bad
+# print(lastname.upper) # bad
 
-# print(firstname.lower())
-# print(lastname.upper())
+# print(firstname.lower()) # better
+# print(firstname.casefold()) # good
+# print(lastname.upper()) #better
 
 # print(firstname.capitalize())
 # print(lastname.capitalize())
 
 #------------------
+
+circus = "weLcomE to THE CIrcUS"
+
+# print(circus)
+
+# print(circus.title())
+
+circus_title = "Welcome To The Circus"
+
+# print(circus_title.istitle())
+
+#------------------
+# .isalnum()
+
+
+
+#------------------
+# .isalnum()
+
+
+
+#------------------
+# .isalpha()
+
+
+
+#------------------
+# .isascii()
+
+
+
+#------------------
+# .isdigit()
+
+
+
+
+#------------------
+# .islower()
+
+
+
+#________________________________________________________________________________________________________
+# Stripping Whitespace off strings
+# Commonly used: after appending strings with no values
 
 sentence = "        I went home and realized I forgot everything I learned today...                   "
 
@@ -101,7 +156,10 @@ sentence2 = "        I went home and realized I forgot everything I learned toda
 
 # print(sentence2.strip())
 
-#------------------
+
+#________________________________________________________________________________________________________
+# Replacing Specified character groups
+# Commonly used: on urls/links
 
 hello = "Hello, Herald"
 
@@ -121,7 +179,10 @@ google = "www.google.com"
 
 # print(google.replace("www.", "").replace(".com", ""))
 
-#------------------
+
+#________________________________________________________________________________________________________
+# Splitting the string into a list
+
 
 splitting = "I like Python, the language."
 
@@ -133,6 +194,68 @@ splitting = "I like Python, the language."
 
 # print(splitting.split("."))
 
-#------------------
+
+#________________________________________________________________________________________________________
 
 # Formatting
+
+age = 28
+
+txt = "Howdy, I'm Diego and I'm {} and come from {}" #(variable) txt: Literal['Howdy, I\'m Diego and I\'m {}']
+
+# print(txt.format(age, "Jacksonville")) 
+
+#------------------
+
+age2 = 32
+
+# txt2 = "Howdy, I'm Josh and I'm " + age2 # can't
+
+# print(txt2)
+
+#------------------
+
+age3 = 26
+
+# txt3 = ("Howdy, I'm Adam and I'm " + age3) # can't
+
+# print(txt3)
+
+#------------------
+
+age4 = 45
+
+txt4 = "Howdy, I'm George, I am" + str(age4) # can
+
+# print(txt4)
+
+#------------------
+
+# Formatting using index numbers
+
+quantity = 4
+
+item_id = 279
+
+price = 35.96
+
+myorder = "I will pay {2} dollars for {0} packs of item '{1}'."
+
+# print(myorder.format(quantity, item_id, price)) # index[0] == quantity, index[1] == item_id, index[2] == price
+
+#------------------
+
+# Finding the word "transformers" in the string
+# Similar to the .index() method but this one does not display an error if it can't find anything
+
+cars = "I liked that new cars movie where they transform into 'Autobots', oh yeah, the movie is called Transformers. They have a few movies but their recent one was my favorite."
+
+# print(cars)
+
+# print(cars.find("transformers")) # casing is important
+
+# print(cars.find("Transformers"))
+
+# print(cars[95])
+
+# print(cars.find("hotdog"))
