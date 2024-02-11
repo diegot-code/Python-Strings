@@ -110,35 +110,52 @@ circus_title = "Welcome To The Circus"
 
 # print(circus_title.istitle())
 
-#------------------
-# .isalnum()
-
 
 
 #------------------
-# .isalnum()
 
+# True/False
 
+username = "LunarEcho87"
 
-#------------------
-# .isalpha()
+passcode = "993665"
 
+nonAscii = "I'll give you a 🌟"
 
+empty =  "         "
 
-#------------------
-# .isascii()
-
-
-
-#------------------
-# .isdigit()
+name = "george maloney"
 
 
 
 
-#------------------
-# .islower()
+# alphanumerical- if all characters are letters and/or numbers
+# print(username.isalnum())
 
+
+# # alphabet- if all characters are letters
+# print(username.isalpha())
+
+
+# ascii- if all characters can be ascii coded
+# print(nonAscii.isascii())
+
+
+# digit- if all characters are numbers
+# print(passcode.isdigit())
+
+
+
+# lowercase- if all characters are lowercase, can have  numbers
+# print(name.islower())
+
+
+# identifer- if the entire item can identified as a variable
+# print(name.isidentifier())
+
+
+# whitespace- if the item only contains whitespace
+# print(name.isspace())
 
 
 #________________________________________________________________________________________________________
