@@ -47,9 +47,9 @@ I stopped to rest.
 z = "I want to hunt"
 c = "deer"
 
-# print(z + c) # no space error
+# print(z + c) 
 
-# print(z + "6" + c) # no space error
+# print(z + "6" + c) 
 
 # print(z + " " + c) # good
 
@@ -115,6 +115,8 @@ circus_title = "Welcome To The Circus"
 #------------------
 
 # True/False
+# Commonly Used: in if/else statements for verifying an inputted string
+
 
 username = "LunarEcho87"
 
@@ -167,7 +169,7 @@ sentence = "        I went home and realized I forgot everything I learned today
 
 # print(sentence)
 
-# print(sentence.strip()) #gets rid of all whitespace
+# print(sentence.strip()) # gets rid of all whitespace
 
 sentence2 = "        I went home and realized I forgot everything I learned today...             well, at least I found my notes...      "
 
@@ -199,6 +201,7 @@ google = "www.google.com"
 
 #________________________________________________________________________________________________________
 # Splitting the string into a list
+# Commonly Used: when you have a string with multiple words or elements separated by a specific character
 
 
 splitting = "I like Python, the language."
@@ -215,12 +218,21 @@ splitting = "I like Python, the language."
 #________________________________________________________________________________________________________
 
 # Formatting
+# Commonly Used: for user experience
 
 age = 28
 
 txt = "Howdy, I'm Diego and I'm {} and come from {}" #(variable) txt: Literal['Howdy, I\'m Diego and I\'m {}']
 
 # print(txt.format(age, "Jacksonville")) 
+
+#------------------
+
+b_date = "04/25/87"
+
+state = "Wisconsin"
+
+# print(f"I was born {b_date} and grew up in {state}") # can
 
 #------------------
 
@@ -263,16 +275,17 @@ myorder = "I will pay {2} dollars for {0} packs of item '{1}'."
 #------------------
 
 # Finding the word "transformers" in the string
+# Commonly Used: when you want to determine the position of a particular substring within a larger string
 # Similar to the .index() method but this one does not display an error if it can't find anything
 
-cars = "I liked that new cars movie where they transform into 'Autobots', oh yeah, the movie is called Transformers. They have a few movies but their recent one was my favorite."
+cars = "I liked that new cars movie where they transform into 'Auto bots', oh yeah, the movie is called Transformers. They have a few movies but their recent one was my favourite."
 
 # print(cars)
 
-# print(cars.find("transformers")) # casing is important
+# print(cars.find("transformers")) # bad, casing is important
 
 # print(cars.find("Transformers"))
 
 # print(cars[95])
 
-# print(cars.find("hotdog"))
+# print(cars.find("hotdog")) # 
